@@ -1,0 +1,27 @@
+Imports System
+
+Module Program
+
+    Sub main(Args As String)
+        Dim variable
+
+        Console.WriteLine("----- Menú -----")
+        Do Until variable = 4
+            Console.WriteLine("1. Mostrar mensaje Correcto")
+            Console.WriteLine("2. Mostrar mensaje Incorrecto")
+            Console.WriteLine("3. Ingresar Nombre y Apellido")
+            Console.WriteLine("4. Cancela r/Salir/Cerrar")
+            Console.Write("Ingrese la opción deseada (1/2/3/4): ")
+            variable = Console.ReadLine
+            If variable = 1 Then
+                Console.WriteLine("opcion 1")
+            ElseIf variable = 2 Then
+                Console.WriteLine("Opcion 2")
+            ElseIf variable = 4 Then
+                Console.WriteLine("opcion 3")
+
+            End If
+            Console.WriteLine("opcion 4")
+        Loop
+
+    End Sub
