@@ -3,7 +3,7 @@ Imports System
 Module Program
 
     Sub main(Args As String)
-        Dim variable
+        Dim variable as integer
 
         Console.WriteLine("----- Menú -----")
         Do Until variable = 4
