@@ -1,0 +1,39 @@
+Module trabajo1
+    Sub Main(Args As String())
+        Dim opcion As Integer
+        Dim nombre As String = ""
+        Dim apellido As String = ""
+
+        Console.WriteLine("----- Menú -----")
+        Do Until opcion = 4
+            Console.WriteLine("1. Mostrar mensaje Correcto")
+            Console.WriteLine("2. Mostrar mensaje Incorrecto")
+            Console.WriteLine("3. Ingresar Nombre y Apellido")
+            Console.WriteLine("4. Cancelar/Salir/Cerrar")
+            Console.Write("Ingrese la opción deseada (1/2/3/4): ")
+
+            If Integer.TryParse(Console.ReadLine(), opcion) Then
+                Select Case opcion
+                    Case 1
+                        Console.WriteLine("Opción 1: Mensaje Correcto")
+                    Case 2
+                        Console.WriteLine("Opción 2: Mensaje Incorrecto")
+                    Case 3
+                        Console.Write("Ingrese su nombre: ")
+                        nombre = Console.ReadLine()
+                        Console.Write("Ingrese su apellido: ")
+                        apellido = Console.ReadLine()
+                        Console.WriteLine("Nombre y Apellido: " & nombre & " " & apellido)
+                    Case 4
+                        Console.WriteLine("Saliendo del programa...")
+                    Case Else
+                        Console.WriteLine("Opción inválida. Intente nuevamente.")
+                End Select
+            Else
+                Console.WriteLine("Entrada inválida. Ingrese un número entero válido.")
+            End If
+        Loop
+
+
+    End Sub
+End Module
