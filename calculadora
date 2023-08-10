@@ -1,0 +1,35 @@
+Sub Main(Args As String())
+        Dim a, b As Double
+        Dim algo As String
+
+        Console.WriteLine("----- Menú -----")
+        Console.WriteLine("+ Sumar")
+        Console.WriteLine("- Restar")
+        Console.WriteLine("/ Dividir")
+        Console.WriteLine("* Multiplicar")
+        Console.Write("Seleccione una opción (+,-,/,*): ")
+        algo = Console.ReadLine()
+
+        Console.Write("Ingrese el primer número: ")
+        a = Console.ReadLine()
+        Console.Write("Ingrese el segundo número: ")
+        b = Console.ReadLine()
+
+        If algo = "+" Then
+            Console.WriteLine("Suma: " & (a + b))
+
+        ElseIf algo = "-" Then
+            Console.WriteLine("Resta: " & (a - b))
+        ElseIf algo = "/" Then
+            If b <> 0 Then
+                Console.WriteLine("División: " & (a / b))
+            Else
+                Console.WriteLine("No se puede dividir por cero.")
+            End If
+        ElseIf algo = "*" Then
+            Console.WriteLine("Multiplicación: " & (a * b))
+        Else
+            Console.WriteLine("Opción no válida")
+        End If
+    End Sub
+End Module
